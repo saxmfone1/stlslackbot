@@ -77,6 +77,7 @@ def show_thing(ack, respond, command):
         respond("you forgot to post a thing!")
     else:
         log.info(f"!thing called for {thing}")
+        respond(f"@{command['user'] asked for thing: {thing}} ")
         with TemporaryDirectory() as tempdir:
             log.debug(f"created tempdir: {tempdir}")
             try:
