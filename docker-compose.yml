@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  stlslackbot:
+    image: stlslackbot:latest
+    build: .
+    environment:
+      - SLACK_APP_TOKEN
+      - SLACK_BOT_TOKEN
+      - THINGIVERSE_TOKEN
